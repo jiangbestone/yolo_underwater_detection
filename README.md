@@ -3,31 +3,26 @@
 - 比赛链接：https://www.heywhale.com/home/competition/605ab78821e3f6003b56a7d8
 
 ## 文件说明
-- code : 存放所有相关代码的文件夹
-    - train_data : 存放原始数据文件，[官方数据下载地址](https://tianchi.aliyun.com/competition/information.htm?spm=5176.11165261.5678.2.164f419dba7Pjd&raceId=231666)
-    - tcdata: 存放官方测试数据文件，docker 提交后会自动生成
-    - data :训练数据路径设置 coco128.yaml中设置训练数据路径
-    - models ： 网络相关的代码文件夹
-    - weights ： 保存训练模型的文件夹，best.pt last.pt
-    - convertTrainLabel.py：将官方的数据集转换成yolo数据的格式 运行生成convertor数据文件夹
-    - process_data_yolo.py：滑动窗口处理convertor数据文件夹里面数据，将大图变成1024*1024小图，生成数据文件夹process_data
-    - train.py :  训练代码， 运行该函数进行模型的训练，可以得到模型
-    - detect.py : 预测代码
-    - test.py :测试模型代码
-    - run.sh : 预测测试集，生成结果的脚本   sh run.sh
-    - train.sh : 训练脚本  sh trian.sh 
+- code : 存放所有相关代码的文件夹[YOLOV5]
+
+        - data :训练数据路径设置 coco128.yaml中设置训练数据路径
+        - models ：网络相关的代码文件夹
+		- convertTrainLabel.py：将官方的数据集转换成yolo数据的格式
+		- train.py :  训练代码， 运行该函数进行模型的训练，可以得到模型
+        - detect.py : 预测代码
+        - test.py :测试模型代码
+        - test.sh : 预测测试集，生成结果的脚本   sh test.sh
+        - train.sh : 训练脚本  sh trian.sh 
  
     
 
 
 ## 操作说明
 - step1 : 将官方训练数据集解压后放入tcdata 文件夹
-- step2 : 将模型文件放入tcdata 文件夹
+- step2 : 将预训练best.pt模型文件放入model_data文件夹
 - step3 : 训练运行  sh train.sh  
-    - train.sh 有四步
+    - train.sh 有两步
         -python convertTrainLabel.py
-        -python process_data_yolo.py
-        -rm -rf ./convertor
         -python train.py
 - step4 : 生成结果 sh run.sh
 

@@ -1,4 +1,4 @@
+cd ./data_process
 python ./data_process/convertTrainLabel.py
-python ./data_process/process_data_yolo.py
+cd ../
 python train.py
-
