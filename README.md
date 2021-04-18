@@ -21,18 +21,19 @@
 
 
 ## 操作说明
-- step1 : 将官方训练数据集解压后放入train_data 文件夹
-- step2 : 训练运行  sh train.sh  
+- step1 : 将官方训练数据集解压后放入tcdata 文件夹
+- step2 : 将模型文件放入tcdata 文件夹
+- step3 : 训练运行  sh train.sh  
     - train.sh 有四步
         -python convertTrainLabel.py
         -python process_data_yolo.py
         -rm -rf ./convertor
         -python train.py
-- step3 : 生成结果 sh run.sh
+- step4 : 生成结果 sh run.sh
 
 ## 思路说明
 - 本方案采用了yolov5作为baseline
-- 数据处理：滑动窗口分割训练图片
+
 
 
 ##改进思路
