@@ -15,6 +15,8 @@
         - train.sh : 训练脚本  sh trian.sh 
  
     
+预训练文件下载链接：链接：https://pan.baidu.com/s/1Y7BY8DsN0HufsYvw6zmxDQ 
+提取码：vsiz 
 
 
 ## 操作说明
