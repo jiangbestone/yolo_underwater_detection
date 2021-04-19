@@ -1,4 +1,2 @@
-cd ./data_process
-python ./data_process/convertTrainLabel.py
-cd ../
+python convertTrainLabel.py
 python train.py
