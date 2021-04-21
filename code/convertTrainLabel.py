@@ -20,7 +20,7 @@ def convert(size, box):
 
 
 def convert_annotation(image_id, img_dir , box_dir):
-    in_file = open('../../tcdata/train/box/%s.xml' % (image_id))
+    in_file = open('../tcdata/train/box/%s.xml' % (image_id))
     out_file = open('%s/%s.txt' % (box_dir, image_id), 'w')  # 生成txt格式文件
     tree = ET.parse(in_file)
     root = tree.getroot()
@@ -43,14 +43,14 @@ def convert_annotation(image_id, img_dir , box_dir):
 
 
 
-image_dir = "../../tcdata/train/image/"
-box_dir = "../../tcdata/train/box/"
+image_dir = "../tcdata/train/image/"
+box_dir = "../tcdata/train/box/"
 
 
-train_img_dir = "../../user_data/tmp_data/images/train"
-train_box_dir = "../../user_data/tmp_data/labels/train"
-val_img_dir = "../../user_data/tmp_data/images/val"
-val_box_dir = "../../user_data/tmp_data/labels/val"
+train_img_dir = "../user_data/tmp_data/images/train"
+train_box_dir = "../user_data/tmp_data/labels/train"
+val_img_dir = "../user_data/tmp_data/images/val"
+val_box_dir = "../user_data/tmp_data/labels/val"
 
 
 if not os.path.exists(train_img_dir):
