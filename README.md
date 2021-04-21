@@ -23,8 +23,8 @@
 - step1 : 将官方训练数据集解压后放入tcdata 文件夹
 - step2 : 将预训练best.pt模型文件放入model_data文件夹
 - step3 : 训练运行   
-        -python convertTrainLabel.py
-        -python train.py
+        - python convertTrainLabel.py  
+		- python train.py
 - step4 : 测试
 		-python detect.py
 
